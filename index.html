@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PyHost — Python Hosting</title><link rel="stylesheet" href="/static/style.css"></head>
+<body><div class="shell">
+<header><div class="brand"><span class="logo">Py</span><div><b>PyHost</b><small>Python Hosting Panel</small></div></div><button id="logout" class="ghost hidden">Đăng xuất</button></header>
+<section id="auth" class="auth card"><div><p class="eyebrow">CLOUD PYTHON PLATFORM</p><h1>Your Python.<br><span>Your cloud.</span></h1><p class="muted">Không cần terminal. Upload code, cài thư viện và vận hành bot ngay trên trình duyệt.</p></div>
+<div class="authform"><div class="tabs"><button id="tabLogin" class="active">Đăng nhập</button><button id="tabRegister">Đăng ký</button></div>
+<input id="username" placeholder="Tên tài khoản" autocomplete="username"><input id="password" type="password" placeholder="Mật khẩu (ít nhất 8 ký tự)">
+<button id="authSubmit" class="primary wide">Đăng nhập</button><p id="authMsg" class="message"></p></div></section>
+<section id="app" class="hidden"><div class="welcome"><div><p class="eyebrow">WORKSPACE</p><h1>Quản lý hosting</h1><p class="muted">Tạo project và vận hành các ứng dụng Python của bạn.</p></div><button id="newProject" class="primary">＋ Tạo project</button></div>
+<div class="layout"><aside class="card"><div class="sidehead">PROJECT CỦA BẠN <span id="projectCount">0</span></div><div id="projectList" class="project-list"></div></aside>
+<main class="card workspace"><div id="empty" class="empty"><div class="emptyicon">⌘</div><h2>Chưa chọn project</h2><p>Chọn project bên trái hoặc tạo project mới.</p></div>
+<div id="projectView" class="hidden"><div class="projecttop"><div><p class="eyebrow">PROJECT</p><h2 id="projectName">—</h2><span id="status" class="status">● Stopped</span></div><button id="deleteProject" class="danger ghost">Xóa project</button></div>
+<div class="toolbar"><input id="runFile" value="bot.py" aria-label="File Python chạy"><button id="start" class="primary">▶ Chạy thử</button><button id="stop" class="ghost">■ Stop (không dùng)</button><button id="restart" class="ghost">↻ Restart (không dùng)</button></div>
+<div class="tabs sectiontabs"><button class="active" data-tab="files">Files</button><button data-tab="editor">Editor</button><button data-tab="console">Console</button></div>
+<div id="filesPane"><div class="fileactions"><label class="upload">↑ Upload<input id="upload" type="file" hidden></label><button id="createFile" class="ghost">＋ Tạo file</button><button id="install" class="ghost">↓ Xem requirements.txt</button></div><div id="fileList" class="filelist"></div></div>
+<div id="editorPane" class="hidden"><div class="editorbar"><span id="editingName">Chưa chọn file</span><button id="saveFile" class="primary">Lưu file</button></div><textarea id="editor" spellcheck="false" placeholder="Chọn một file để chỉnh sửa..."></textarea></div>
+<div id="consolePane" class="hidden"><div class="consolebar"><span>● LIVE LOGS</span><button id="refreshLogs" class="ghost">Làm mới</button></div><pre id="logs">Chọn project để xem console.</pre></div></div></main></div></section>
+<div id="toast" class="toast"></div></div><script src="/static/app.js"></script></body></html>
